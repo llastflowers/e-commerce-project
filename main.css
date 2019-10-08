@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 70px;
+    font-weight: lighter;
+}
