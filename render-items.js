@@ -15,11 +15,11 @@ function renderItems(item) {
     const p = document.createElement('p');
     p.className = 'price';
 
-    const jpy = '¥' + item.price.toFixed(2);
+    const jpy = '¥' + item.price.toFixed(0);
     p.textContent = jpy;
 
     const button = document.createElement('button');
-    button.textContent = 'Add';
+    button.textContent = 'Buy';
     button.value = item.code;
     p.appendChild(button);
 

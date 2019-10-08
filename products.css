@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(254, 215, 0)
+}
+
+h1 {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#items {
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(255, 255, 255, 75%);
+    margin: auto;
+    width: 65%;
+    height: 290px;
+}
+
+#items li {
+    list-style: none;
+    position: relative;
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    width: 140px;
+    height: 175px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+#items li img {
+    width: 50%;
+    margin-top: 10px;
+}
+
+button {
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}
+button:hover {
+    background-color: rgba(212, 46, 46, 70%);
+}
+
+.pikachu {
+    margin: auto;
+}

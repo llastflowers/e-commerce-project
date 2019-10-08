@@ -1,7 +1,7 @@
 const pokeball = {
     id: 'pokeball',
     name: 'PokéBall',
-    image: 'http://placekitten.com/200/200',
+    image: '../assets/pokeball.png',
     description: 'A ball used to catch Pokémon.',
     category: 'ball',
     price: 200,
@@ -11,7 +11,7 @@ const pokeball = {
 const potion = {
     id: 'potion',
     name: 'Potion',
-    image: 'http://placekitten.com/200/200',
+    image: '../assets/potion.png',
     description: 'Restores 20 HP.',
     category: 'medicine',
     price: 300,
@@ -21,7 +21,7 @@ const potion = {
 const escaperope = {
     id: 'escaperope',
     name: 'Escape Rope',
-    image: 'http://placekitten.com/200/200',
+    image: '../assets/escaperope.png',
     description: 'Teleports the player out of a cave or dungeon if the player cannot find the way out.',
     category: 'tool',
     price: 550,
@@ -31,7 +31,7 @@ const escaperope = {
 const antidote = {
     id: 'antidote',
     name: 'Antidote',
-    image: 'http://placekitten.com/200/200',
+    image: '../assets/antidote.png',
     description: 'Heals the poisoning of a Pokémon.',
     category: 'medicine',
     price: 100,
@@ -41,7 +41,7 @@ const antidote = {
 const burnheal = {
     id: 'burnheal',
     name: 'Burn Heal',
-    image: './assets/burnheal.png',
+    image: '../assets/burnheal.png',
     description: 'Heals a burn.',
     category: 'medicine',
     price: 250,
@@ -51,7 +51,7 @@ const burnheal = {
 const awakening = {
     id: 'awakening',
     name: 'Awakening',
-    image: 'http://placekitten.com/200/200',
+    image: '../assets/awakening.png',
     description: 'Awakens a Pokémon from sleep.',
     category: 'medicine',
     price: 200,
@@ -61,7 +61,7 @@ const awakening = {
 const parlyzheal = {
     id: 'parlyzheal',
     name: 'Parlyz Heal',
-    image: 'http://placekitten.com/200/200',
+    image: '../assets/parlyzheal.png',
     description: 'Heals paralysis.',
     category: 'medicine',
     price: 200,
