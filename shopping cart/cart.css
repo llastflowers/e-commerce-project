@@ -1,0 +1,13 @@
+table {
+    margin: auto;
+    width: 500px;
+}
+
+td {
+    text-align: center;
+    border: 1px dotted rgb(218, 36, 36);
+}
+
+tfoot {
+    
+}
