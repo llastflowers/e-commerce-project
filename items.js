@@ -4,8 +4,7 @@ const pokeball = {
     image: '../assets/pokeball.png',
     description: 'A ball used to catch Pokémon.',
     category: 'ball',
-    price: 200,
-    cost: 200
+    price: 200
 };
 
 const potion = {
@@ -14,8 +13,7 @@ const potion = {
     image: '../assets/potion.png',
     description: 'Restores 20 HP.',
     category: 'medicine',
-    price: 300,
-    cost: 300
+    price: 300
 };
 
 const escaperope = {
@@ -24,8 +22,7 @@ const escaperope = {
     image: '../assets/escaperope.png',
     description: 'Teleports the player out of a cave or dungeon if the player cannot find the way out.',
     category: 'tool',
-    price: 550,
-    cost: 550
+    price: 550
 };
 
 const antidote = {
@@ -34,8 +31,7 @@ const antidote = {
     image: '../assets/antidote.png',
     description: 'Heals the poisoning of a Pokémon.',
     category: 'medicine',
-    price: 100,
-    cost: 100
+    price: 100
 };
 
 const burnheal = {
@@ -44,8 +40,7 @@ const burnheal = {
     image: '../assets/burnheal.png',
     description: 'Heals a burn.',
     category: 'medicine',
-    price: 250,
-    cost: 250
+    price: 250
 };
 
 const awakening = {
@@ -54,8 +49,7 @@ const awakening = {
     image: '../assets/awakening.png',
     description: 'Awakens a Pokémon from sleep.',
     category: 'medicine',
-    price: 200,
-    cost: 200
+    price: 200
 };
 
 const parlyzheal = {
@@ -64,8 +58,7 @@ const parlyzheal = {
     image: '../assets/parlyzheal.png',
     description: 'Heals paralysis.',
     category: 'medicine',
-    price: 200,
-    cost: 200
+    price: 200
 };
 
 const items = [
