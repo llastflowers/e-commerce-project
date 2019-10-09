@@ -19,3 +19,8 @@ export const findById = (items, id) => {
 
     return null;
 };
+
+export const calcLineTotal = (quantity, price) => {
+    const amount = quantity * price;
+    return (amount);
+};

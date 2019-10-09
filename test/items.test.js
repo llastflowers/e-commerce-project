@@ -3,6 +3,7 @@
 import renderItems from '../products/render-items.js';
 import renderTableRow from '../shopping cart/render-table-row.js';
 import { findById } from '../common/utils.js';
+import { calcLineTotal } from '../common/utils.js';
 import items from '../api.js';
 
 const test = QUnit.test;
@@ -81,3 +82,18 @@ test('find item by id returns null if not found', function(assert) {
     // Make assertions about what is expected valid result
     assert.equal(foundItem, expected);
 });
+
+test('calculate line total', function(assert) {
+    //Arrange
+    const quantity = 10;
+    const price = 200;
+    const expected = 2000;
+   
+    //Act 
+    const total = calcLineTotal(quantity, price);
+    // Call the function you're testing and set the result to a const
+     //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(total, expected);
+});
+
