@@ -2,6 +2,8 @@
 // import example from '../src/example.js';
 import renderItems from '../products/render-items.js';
 import renderTableRow from '../shopping cart/render-table-row.js';
+import { findById } from '../common/utils.js';
+import items from '../api.js';
 
 const test = QUnit.test;
 
@@ -51,4 +53,31 @@ test('renders a table row', function(assert) {
      //Assert
     // Make assertions about what is expected valid result
     assert.equal(htmlTr, expected);
+});
+
+test('find item by id', function(assert) {
+    //Arrange
+    const id = 'pokeball';
+    const expected = 'PokéBall';
+   
+    //Act 
+    const foundItem = findById(items, id);
+    // Call the function you're testing and set the result to a const
+     //Assert
+    // Make assertions about what is expected valid result
+    assert.ok(foundItem);
+    assert.equal(foundItem.name, expected);
+});
+
+test('find item by id returns null if not found', function(assert) {
+    //Arrange
+    const id = 'not found';
+    const expected = null;
+   
+    //Act 
+    const foundItem = findById(items, id);
+    // Call the function you're testing and set the result to a const
+     //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(foundItem, expected);
 });
