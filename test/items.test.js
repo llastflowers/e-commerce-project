@@ -4,7 +4,10 @@ import renderItems from '../products/render-items.js';
 import renderTableRow from '../shopping cart/render-table-row.js';
 import { findById } from '../common/utils.js';
 import { calcLineTotal } from '../common/utils.js';
+import { calcOrderTotal } from '../common/utils.js';
 import items from '../api.js';
+import { cart } from '../api.js';
+
 
 const test = QUnit.test;
 
@@ -97,3 +100,14 @@ test('calculate line total', function(assert) {
     assert.equal(total, expected);
 });
 
+test('calculate order total', function(assert) {
+    //Arrange
+    const expected = 5000;
+   
+    //Act 
+    const orderTotal = calcOrderTotal(cart, items);
+    // Call the function you're testing and set the result to a const
+     //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(orderTotal, expected);
+});

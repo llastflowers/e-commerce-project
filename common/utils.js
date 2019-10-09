@@ -24,3 +24,16 @@ export const calcLineTotal = (quantity, price) => {
     const amount = quantity * price;
     return (amount);
 };
+
+export const calcOrderTotal = (cart, items) => {
+    let orderTotal = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const item = findById(items, lineItem.id);
+        const lineTotal = calcLineTotal(lineItem.quantity, item.price);
+        orderTotal += lineTotal;
+    }
+
+    return (orderTotal);
+};
