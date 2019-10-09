@@ -1,27 +1,27 @@
-import { renderTableRow } from './render-table-row';
+import renderTableRow from './render-table-row.js';
 import items, { cart } from '../api.js';
 import { makePrettyCurrency } from '../common/utils.js';
-
+           
 const tableElement = document.querySelector('tbody');
 
+let cartTotal = 0;
 cart.forEach(itemOrder => {
     items.forEach(item => {
         let itemTotal;
 
-        // if (item.id === itemOrder.id) {}...?
-    });
-    // store the order id in a readable variable
-    const itemIdFromOrder = itemOrder.id;
-    
-    // loop thru the item array to find the item that matches the item of this order
-    for (let i = 0; i < items.length; i++) {
-        // if the id of the item matches the id of the order . . .
-        if (items[i].id === itemIdFromOrder) {
-            // go ahead and render the Table Row
-            const row = renderTableRow(items[i], itemOrder);
+        if (item.id === itemOrder.id) {
+            const row = renderTableRow(item, itemOrder);
 
             tableElement.appendChild(row);
+
+            itemTotal = item.price * itemOrder.quantity;
+
+            cartTotal = cartTotal + itemTotal;
         }
-    }
+    });
+  
+    const totalCell = document.getElementById('order-total-cell');
+
+    totalCell.textContent = makePrettyCurrency(cartTotal);
  
 });

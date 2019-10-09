@@ -75,15 +75,14 @@ export default items;
 
 export const cart = [{
     id: 'pokeball',
-    quantity: 2
-
+    quantity: 10
 }, {
     id: 'potion',
     quantity: 5
 }, {
     id: 'escaperope',
-    quantity: 1
+    quantity: 2
 }, {
     id: 'antidote',
-    quantity: 10
+    quantity: 4
 }];

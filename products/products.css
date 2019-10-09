@@ -7,6 +7,14 @@ h1 {
     border-color: transparent;
 }
 
+a {
+    margin: 20px;
+    padding: 10px;
+    border: 1px dotted rgb(194, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 75%)
+}
+
 h3 {
     font-size: 20px;
 }
@@ -57,6 +65,7 @@ button {
 }
 button:hover {
     background-color: rgba(212, 46, 46, 70%);
+    cursor: pointer;
 }
 
 .pikachu {
