@@ -1,16 +1,17 @@
-const emptyCart = [{ id: 'pokeball', quantity: 1 }];
+const emptyCart = [];
 export const CART_KEY = 'cart';
 
 export const getById = (id, items) => {
     let matchingItem;
-
-    items.forEach(item => {
+    items.forEach = (item => {
+     
         if (item.id === id) {
             matchingItem = item;
         }
     });
 
     return matchingItem;
+
 };
 
 export const increaseCartItemsById = (id, cart) => {
@@ -18,7 +19,7 @@ export const increaseCartItemsById = (id, cart) => {
     cart.forEach(order => {
         if (order.id === id) {
             order.quantity++;
-            foundAMatch = true;
+            foundAMatch = true;  
         }
     });
 
@@ -29,7 +30,6 @@ export const increaseCartItemsById = (id, cart) => {
             id: id,
             quantity: 1,
         };
-
         cart.push(newItem);
     }
 };
@@ -43,23 +43,25 @@ const startEmptyCart = () => {
 const getCart = () => JSON.parse(localStorage.getItem(CART_KEY));
 
 const setCart = (storedCart) => {
+
     const serializedNewCart = JSON.stringify(storedCart);
     localStorage.setItem(CART_KEY, serializedNewCart);
 };
 
-function renderItems(item) {
-    const li = document.createElement('li');
-    li.classname = item.category;
-    li.title = item.description;
+export default (item) => {
+    
+    const itemElement = document.createElement('li');
+    itemElement.classname = `${item.category} item-box`;
+    itemElement.title = item.description;
 
     const h3 = document.createElement('h3');
     h3.textContent = item.name;
-    li.appendChild(h3);
+    itemElement.appendChild(h3);
 
     const img = document.createElement('img');
     img.src = '../assets/' + item.image;
-    img.alt = item.name + ' image';
-    li.appendChild(img);
+    img.alt = item.name + 'image';
+    itemElement.appendChild(img);
 
     const p = document.createElement('p');
     p.className = 'price';
@@ -77,17 +79,15 @@ function renderItems(item) {
             startEmptyCart();
             storedCart = getCart();
         }
-    
-        let itemIncrease = getById(item.id, storedCart);
-        itemIncrease && itemIncrease.quantity++;
+        
+        increaseCartItemsById(item.id, storedCart);
     
         setCart(storedCart);
     });
+
     p.appendChild(button);
 
-    li.appendChild(p);
+    itemElement.appendChild(p);
 
-    return li;
-}
-
-export default renderItems;
+    return itemElement;
+};
