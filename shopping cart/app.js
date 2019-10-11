@@ -1,9 +1,10 @@
 import renderTableRow from './render-table-row.js';
-import items from '../api.js';
+import itemInventory from '../api.js';
 import { makePrettyCurrency } from '../common/utils.js';
-import { CART_KEY } from '../products/render-items.js';
+import { getCart } from '../products/render-items.js';
            
 const tableElement = document.querySelector('tbody');
+const cartOrders = getCart();
 // const orderTotalCell = document.getElementById('order-total-cell');
 // const buyButton = document.getElementById('buy-button');
 
@@ -59,28 +60,35 @@ const buildTable = (cart, items) => {
     addRows(cart, items);
 };
 
-const javascriptReadableCart = JSON.parse(localStorage.getItem(CART_KEY));
+const localStorageCart = localStorage.getItem('cart');
+const parsedCartActualData = JSON.parse(localStorageCart);
 
-buildTable(javascriptReadableCart, items);
+buildTable(parsedCartActualData, itemInventory);
 
-for (let i = 0; i < items.lgenth; i++) {
-    if (items[i].id === itemOrder.id) {
-        const row = renderTableRow(items[i, itemOrder);
+for (let i = 0; i < cartOrders.length; i++) {
+    if (cartOrders[i].id === itemInventory.id) {
+        const row = renderTableRow(itemInventory, cartOrders[i]);
         
         tableElement.appendChild(row);
     }
 }
 
-// const totalCost = calcTotalCost(cart, items);
-// orderTotalCell.textContent = toJPY(totalCost);
+const buyButton = document.getElementById('buy-button');
+const clearButton = document.getElementById('clear-button');
 
-// if (cart.length === 0) {
-//     buyButton.disabled = true;
-// }
-// else {
-//     buyButton.addEventListener('click', () => {
-//         localStorage.removeItem('CART_KEY');
-//         alert('Purchase complete' + JSON.stringyify(cart, true, 2));
-//         window.location = 'index.html';
-//     });
-// }
+clearButton.addEventListener('click', () => {
+    window.localStorage.clear();
+});
+
+if (cartOrders.length === 0) {
+    buyButton.disabled = true;
+}
+
+else {
+    buyButton.addEventListener('click', () => {
+        localStorage.removeItem('CART_KEY');
+        alert(JSON.stringify('Purchase Complete!', true, 2));
+        alert(JSON.stringify('Leaving Poké Mart...', true, 2));
+        window.location = '../';
+    });
+}

@@ -40,7 +40,7 @@ const startEmptyCart = () => {
     localStorage.setItem('cart', serializedCart);
 };
 
-const getCart = () => JSON.parse(localStorage.getItem(CART_KEY));
+export const getCart = () => JSON.parse(localStorage.getItem(CART_KEY));
 
 const setCart = (storedCart) => {
 
@@ -71,7 +71,7 @@ export default (item) => {
 
     const button = document.createElement('button');
 
-    button.textContent = 'Buy';
+    button.textContent = 'Add';
     button.value = item.id;
     button.addEventListener('click', () => {
         let storedCart = getCart();
@@ -81,8 +81,9 @@ export default (item) => {
         }
         
         increaseCartItemsById(item.id, storedCart);
-    
+        
         setCart(storedCart);
+    
     });
 
     p.appendChild(button);

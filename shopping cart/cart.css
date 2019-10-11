@@ -32,18 +32,42 @@ h2 {
 }
 
 button {
-    background-color: white;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
     border: 2px solid black;
-    margin-top: 30px;
+    margin: 30px 30px 0px 30px;
     padding: 5px;
 }
-button:hover {
-    background-color: rgba(212, 46, 46, 70%);
+
+#buy-button:hover {
+    background-color: white;
     cursor: pointer;
 }
 
+#clear-button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#buy-button:active {
+    background-color: black;
+    color: white;
+}
+
+#clear-button:active {
+    background-color: black;
+    color: white;
+}
+
+
+#buy-button {
+    background-color: rgb(62, 178, 255);
+}
+
+#clear-button {
+    background-color: rgb(238, 20, 20);
+}
+
 .pikachu {
-    margin: auto;
+    margin-top: auto;
 }

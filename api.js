@@ -61,7 +61,7 @@ const parlyzheal = {
     price: 200
 };
 
-const items = [
+const itemInventory = [
     pokeball,
     potion,
     escaperope,
@@ -71,7 +71,7 @@ const items = [
     parlyzheal
 ];
 
-export default items;
+export default itemInventory;
 
 export const cart = [{
     id: 'pokeball',
