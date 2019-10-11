@@ -23,7 +23,7 @@ test('renders items', function(assert) {
         price: 200
     };
 
-    const expected = '<li title="A ball used to catch Pokémon."><h3>PokéBall</h3><img src="../assets/../assets/pokeball.png" alt="PokéBallimage"><p class="price">¥200<button value="pokeball">Buy</button></p></li>';
+    const expected = '<li title="A ball used to catch Pokémon."><h3>PokéBall</h3><img src="../assets/../assets/pokeball.png" alt="PokéBallimage"><p class="price">¥200<button value="pokeball">Add</button></p></li>';
     //Act 
     // Call the function you're testing and set the result to a const
     const itemElementLi = renderItems(pokeball);

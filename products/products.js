@@ -8,6 +8,6 @@ for (let i = 0; i < itemInventory.length; i++) {
     
     const itemListElement = renderItemElement(item);
     
-    list.appendChild(itemListElement);
+    list.appendChild(itemListElement); 
 
 }

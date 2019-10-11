@@ -78,7 +78,7 @@ const clearButton = document.getElementById('clear-button');
 
 clearButton.addEventListener('click', () => {
     window.localStorage.clear();
-});
+
 
 if (cartOrders.length === 0) {
     buyButton.disabled = true;
@@ -91,4 +91,3 @@ else {
         alert(JSON.stringify('Leaving Poké Mart...', true, 2));
         window.location = '../';
     });
-}
