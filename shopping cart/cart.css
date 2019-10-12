@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(254, 215, 0)
+}
+
+h1 {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+a {
+    margin: 20px;
+    padding: 10px;
+    border: 1px dotted rgb(194, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 75%)
+}
+
+table {
+    margin: auto;
+    width: 500px;
+    border: 3px dotted rgb(194, 0, 0);
+    background-color: rgba(255, 255, 255, 75%)
+}
+
+td, th {
+    text-align: center;
+    border: 1px dotted rgb(218, 36, 36);
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+button {
+    border-radius: 10px;
+    font-size: 25px;
+    border: 2px solid black;
+    margin: 30px 30px 0px 30px;
+    padding: 5px;
+}
+
+#buy-button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#clear-button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#buy-button:active {
+    background-color: black;
+    color: white;
+}
+
+#clear-button:active {
+    background-color: black;
+    color: white;
+}
+
+
+#buy-button {
+    background-color: rgb(62, 178, 255);
+}
+
+#clear-button {
+    background-color: rgb(238, 20, 20);
+}
+
+.pikachu {
+    margin-top: auto;
+}

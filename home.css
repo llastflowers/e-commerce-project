@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(254, 215, 0); */
+    background-image: url('https://cdn.bulbagarden.net/upload/thumb/0/0b/Pewter_City_anime.png/800px-Pewter_City_anime.png');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Covered By Your Grace', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: lighter;
+    color: rgb(194, 0, 0);
+    text-shadow: 5px 5px white;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(255, 230, 0, 80%);
+    border: 6px dotted rgb(255, 208, 0);
+    width: 450px;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 2%;
+    color: black;
+    text-shadow: 2px 2px white;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight: lighter;
+    font-size: 40px;
+    margin: 2%;
+    color: black;
+    text-shadow: 2px 2px white;
+}
+
+.grid {
+    display: grid;
+    grid-template: 
+     'a a a a'
+     'a a a a';
+    grid-gap: 10px;
+    margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    border-radius: 30px;
+    border: 6px double white;
+    background-color: rgb(255, 255, 255, 80%);
+    height: 475px;
+    width: 900px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    border: dotted 7px white;
+    border-radius: 100px;
+}
+
+.text {
+    text-align: center;
+    font-family: Verdana;
+    line-height: 15px;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    color: black;
+    font-size: 15px;
+}
+
+/* rgb(194, 0, 0, 50%); */
