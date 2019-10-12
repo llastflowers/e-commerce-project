@@ -85,4 +85,12 @@ else {
         alert('Leaving Poké Mart...');
         window.location = '../';
     });
+
+    const clearButton = document.getElementById('clear-button');
+
+    clearButton.addEventListener('click', () => {
+        localStorage.removeItem('cart');
+        alert('Cart cleared!');
+        window.location = '../shopping cart/index.html';
+    });
 }
