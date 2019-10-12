@@ -74,20 +74,15 @@ for (let i = 0; i < cartOrders.length; i++) {
 }
 
 const buyButton = document.getElementById('buy-button');
-const clearButton = document.getElementById('clear-button');
-
-clearButton.addEventListener('click', () => {
-    window.localStorage.clear();
-
 
 if (cartOrders.length === 0) {
     buyButton.disabled = true;
 }
-
 else {
     buyButton.addEventListener('click', () => {
-        localStorage.removeItem('CART_KEY');
-        alert(JSON.stringify('Purchase Complete!', true, 2));
-        alert(JSON.stringify('Leaving Poké Mart...', true, 2));
+        localStorage.removeItem('cart');
+        alert('Thanks for your purchase!' + JSON.stringify(cartOrders, true, 2));
+        alert('Leaving Poké Mart...');
         window.location = '../';
     });
+}
